@@ -35,7 +35,9 @@ webbrowser.open(authorize_url)
 
 code = raw_input("Enter the authorization code here: ").strip()
 
-access_token, user_id = flow.finish(code)
+try:
+    access_token, user_id = flow.finish(code)
+    # v gbhnm,
 
-print "The user_id is: " + user_id
+print("The user_id is: " + user_id)
 print "And the access token is: " + access_token
